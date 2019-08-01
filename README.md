@@ -6,6 +6,11 @@ Dockerfile to deploy a simple nginx app
 sudo git clone https://github.com/idanbenyair/nginx-deploy.git
 ```
 
+#Go into the nginx-deploy directory
+```
+cd nginx-deploy
+```
+
 #Build container
 ```
 docker build --build-arg ENVIRON=prod --build-arg WORKER_PROCESS=50 --build-arg WORKER_RLIMIT_NOFILE=8192 --build-arg WORKER_CONNECTIONS=4096 -t nginx-deploy .

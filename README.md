@@ -8,7 +8,7 @@ sudo git clone https://github.com/idanbenyair/nginx-deploy.git
 
 #Build container
 ```
-build --build-arg ENVIRON=prod --build-arg WORKER_PROCESS=50 --build-arg WORKER_RLIMIT_NOFILE=100 --build-arg WORKER_CONNECTIONS=200 -t nginx-deploy .
+build --build-arg ENVIRON=prod --build-arg WORKER_PROCESS=50 --build-arg WORKER_RLIMIT_NOFILE=8192 --build-arg WORKER_CONNECTIONS=4096 -t nginx-deploy .
 ```
 
 #Run the container
